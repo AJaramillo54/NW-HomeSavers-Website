@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic|Crete+Round:400,400italic" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="scripts/javascript.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/manifest.css">
+        <title>NW HomeSavers: Rebuilding Your American Dream</title>
+    </head>
+
+    <body>
+
+        <header id="main-header">
+            <!--------------Desktop navigation------------->
+            <nav id="nav-desktop" class="nav">
+                <div id="nav-container-desktop">
+                    <a class="text-list-link" href="tel:503-601-6600" alt="503-601-6600">tel: (503) 601-6600</a>
+                    <ul class="list-container">
+                        <li class="text-list-item text-list-item-left"><a class="text-list-link" href="about.html" alt="about">About us</a></li>
+                        <li id="services-list-parent" class="text-list-item text-list-item-left"><a id="services-list-link" class="text-list-link" href="#services" alt="services">Services</a>
+                            <ul id="services-list">
+                                <div id="services-list-item-container">
+                                    <li class="text-list-item services-list-item"><a class="text-list-link" href="homeowner_services.html" alt="homeowner services">For Homeowners</a></li>
+                                    <li class="text-list-item services-list-item"><a class="text-list-link" href="broker_services.html" alt="broker services">For Brokers</a></li>
+                                    <div class="triangle-down">▲</div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="img-link"><a href="index.html" alt="home"><img class="header-logo" src="../img/logo_green-grey.svg" alt="logo"></a></li>
+                        <li class="text-list-item text-list-item-right"><a class="text-list-link" href="testimonials.html" alt="testimonals">Testimonials</a></li>
+                        <li class="text-list-item text-list-item-right"><a class="text-list-link" href="contact.html" alt="contact">Contact Us</a></li>
+                    </ul>
+                    <a class="text-list-link" href="fax:503-601-6601" alt="503-601-6601">fax: (503) 601-6601</a>
+                </div>
+            </nav> 
+
+            <!--------------Mobile navigation------------->
+            <nav id="nav-mobile" class="nav">
+                <a class="img-link" href="tel:503-601-6600" alt="503-601-6600"><img class="icon-phone" src="../img/phone_nw-green.svg" alt="phone"></a>
+                <a class="img-link" href="index.html" alt="home"><img class="nav-logo" src="../img/logo_green-grey.svg" alt="logo"></a>
+                <button id="hamburger-btn"></button>
+                <div id="hamburger-list" class="list-container">
+                    <li class="text-list-item"><a class="text-list-link" href="about.html" alt="about">About us</a></li>
+                    <li class="text-list-item"><a class="text-list-link" href="homeowner_services.html" alt="homeowner services">Homeowner Services</a></li>
+                    <li class="text-list-item"><a class="text-list-link" href="broker_services.html" alt="broker services">Broker Services</a></li>
+                    <li class="text-list-item"><a class="text-list-link" href="testimonials.html" alt="testimonials">Testimonials</a></li>
+                    <li class="text-list-item"><a class="text-list-link" href="contact.html" alt="contact">Contact Us</a></li>
+                    <li class="text-list-item"><a id="phone" class="text-list-link" href="tel:503-601-6600" alt="503-601-6600">tel: (503) 601-6600</a></li>
+                    <li class="text-list-item"><a id="fax" class="text-list-link" href="fax:503-601-6601" alt="fax">fax: (503) 601-6601</a></li>
+                </div>
+            </nav>            
+        </header>
+        <!--------------Content------------->
+        <div id="content-wrapper">
+            <section class="content indent about-content">
+                <h1 class="secondary-heading-desktop">We have your short sales covered.</h1>
+                <div id="article-container">   
+                    <article class="broker-article">
+                        <div id="img-broker-green" class="customer-type-icon"></div>
+                        <h3 class="icon-title">Services for Brokers</h3>
+                        <div class="content-negotiations indent-left">
+                            <h3>Short Sale Negotiations</h3>
+                            <p>As you know, short sales can take a considerable amount of your time and attention. Allow us to handle your short sale negotiations from the beginning of the process until the end. Special Debt Management Service Provider licensing allows us to negotiate on your behalf.  Simply list and market a property and we handle the rest of the process for you. With or without an offer on the home in question, we can work with your client’s mortgage company to get any short sale negotiation initiated.</p>
+                        </div>
+                        <div class="content-negotiations indent-left">
+                            <h3>Get Started</h3>
+                            <p>Getting a short sale started with us is fast and simple. Just follow the steps below:</p>
+                            <ol id="get-started-list-container">
+                                <li class="text-list-item"><a class="text-link-dark" href="" alt="starter packets">Request</a> a starter packet from us.</li>
+                                <li class="text-list-item">Complete all of the documents found within your starter packet.</li>
+                                <li class="text-list-item">Submit your completed starter packet by fax, email, or post at your convenience.</li>
+                                <li class="list-container">
+                                    <ul id="mail-packet-list-container" class="list-container">
+                                        <li class="text-list-item mail-list-item"><span id="list-fax"><a class="text-link-dark" href="fax:503-601-6601" alt="fax">(503) 601-6601</a></span></li>
+                                        <li class="text-list-item mail-list-item"><span id="email"><a class="text-link-dark" href="contact.html" alt="email">shortsaleupload@gmail.com</a></span></li>
+                                        <li class="text-list-item mail-list-item"><span id="address"><a class="text-link-dark" href="https://www.google.com/maps/dir//45.519509,-123.1124586/@45.520518,-123.111458,15z?hl=en" target="_blank" alt="NW HomeSavers address">1926 Pacific Ave Suite B, Forest Grove OR 97116</a></span></li>                      
+                                         
+                                    </ul>
+                                </li>
+                            </ol>
+                       <p>By completing and submitting the documents found within your starter packet, you will allow us to review your file and initiate your short sale with the appropriate mortgage company. Your starter packet also includes a handful of forms for the seller to complete, as well as a checklist of other documents the bank will need to move your short sale forward. We will also request necessary items from the appropriate listing agent and title company in order to initiate the short sale negotiation process.</p>
+                        <p><a class="text-link-dark" href="contact.html" alt="Home Owner Info.">Submit a starter packet now !</a></p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="content indent about-content">  
+                <article class="broker-article">
+                    <div id="img-pencil" class="customer-type-icon"></div>
+                    <h3 class="icon-title">Short Sale Classes</h3>
+                    <div id="content-classes" class="indent-left">
+                        <h3>Learn from the experts</h3>
+                        <p>The owner of NW HomeSavers, Chris Garfield, offers short sale training classes to help realtors master the shortsale negotiation process. Chris offers two training courses:  <i>Short Sales from Beginning to End</i> and <i>Short Sales in a Rising Market</i>. These courses can be taught at a location of your choice, including your own office. Realtors can earn continuing education credit hours by attending these courses.  To learn more about these classes, or to schedule a date for Chris to host a class at a location of your choice, please complete and submit the form below.</p>
+                    </div>
+                    <div class="form-classes">
+                        <form id="classes" action="/contact/" method="post" accept-charset="utf-8" enctype="multpart/form-data">
+                            <!------------- Radio Button --------------->
+                            <fieldset>
+                                <legend>Please select the course your would like taught</legend>
+                                <div class="radio-container">
+                                    <input id="r1" class="radio" type="radio" name="course_type" value="beginning" checked />
+                                    <label for="r1"><span></span>Short Sales from Beginning to End</label><br><br>
+                                    <input id="r2" class="radio" type="radio" name="course_type" value="risingMarket" />
+                                    <label for="r2"><span></span>Short Sales in a Rising Market</label>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Please complete each of the following fields</legend>
+                                <input class="input-text" type="text" name="company" placeholder="Company Name">                                <input class="input-text" type="text" name="firstname" placeholder="First Name of Organizer" autofocus>
+                                <input class="input-text" type="text" name="lastname" placeholder="Last Name of Organizer">
+                                <input class="input-text" type="text" name="street" placeholder="Street Address">
+                                <input class="input-text" type="text" name="city" placeholder="City">
+                                <select id="states" class="input-text" name="state" form="classes">
+                                    <option value="AL">AL</option>
+                                    <option value="AK">AK</option>
+                                    <option value="AZ">AZ</option>
+                                    <option value="AR">AR</option>
+                                    <option value="CA">CA</option>
+                                    <option value="CO">CO</option>
+                                    <option value="CT">CT</option>
+                                    <option value="DE">DE</option>
+                                    <option value="DC">DC</option>
+                                    <option value="FL">FL</option>
+                                    <option value="GA">GA</option>
+                                    <option value="HI">HI</option>
+                                    <option value="ID">ID</option>
+                                    <option value="IL">IL</option>
+                                    <option value="IN">IN</option>
+                                    <option value="IA">IA</option>
+                                    <option value="KS">KS</option>
+                                    <option value="KY">KY</option>
+                                    <option value="LA">LA</option>
+                                    <option value="ME">ME</option>
+                                    <option value="MD">MD</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MI">MI</option>
+                                    <option value="MN">MN</option>
+                                    <option value="MS">MS</option>
+                                    <option value="MO">MO</option>
+                                    <option value="MT">MT</option>
+                                    <option value="NE">NE</option>
+                                    <option value="NV">NV</option>
+                                    <option value="NH">NH</option>
+                                    <option value="NJ">NJ</option>
+                                    <option value="NM">NM</option>
+                                    <option value="NY">NY</option>
+                                    <option value="NC">NC</option>
+                                    <option value="ND">ND</option>
+                                    <option value="OH">OH</option>
+                                    <option value="OK">OK</option>
+                                    <option value="OR" selected>OR</option>
+                                    <option value="PA">PA</option>
+                                    <option value="RI">RI</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SD">SD</option>
+                                    <option value="TN">TN</option>
+                                    <option value="TX">TX</option>
+                                    <option value="UT">UT</option>
+                                    <option value="VT">VT</option>
+                                    <option value="VA">VA</option>
+                                    <option value="WA">WA</option>
+                                    <option value="WV">WV</option>
+                                    <option value="WI">WI</option>
+                                    <option value="WY">WY</option>
+                                </select>
+                                <input class="input-text" type="number" name="zip" min="11111" max="99999" placeholder="Zip Code">
+                                <input class="input-text" type="email" name="email" placeholder="Email Address">
+                                <input class="input-text" type="tel" name="phone" placeholder="Phone Number">
+                            </fieldset>
+                            <fieldset>
+                                <legend>Please select a time and date</legend>
+                                <input id="date" class="input-text" type="date" name="date">
+                                    <input class="input-text" type="time" name="time">
+                                <textarea name="message" placeholder="Please include details and special requests here."></textarea>
+                                <button class="button-form-white" form="client-message" type="submit" value="Submit">Submit</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </article>
+            </section>  
+            <footer id="main-footer">
+                <div id="footer-container">
+                    <p>&copy; 2015 NW HomeSavers</p>          
+                </div>
+            </footer>
+        </div>
+
+    </body>
+</html>
+
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic|Crete+Round:400,400italic" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="scripts/javascript.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/manifest.css">
+        <title>NW HomeSavers: Rebuilding Your American Dream</title>
+    </head>
+
+    <body>
+
+        <header id="main-header">
+            <!--------------Desktop navigation------------->
+            <nav id="nav-desktop" class="nav">
+                <div id="nav-container-desktop">
+                    <a class="text-list-link" href="tel:503-601-6600" alt="503-601-6600">tel: (503) 601-6600</a>
+                    <ul class="list-container">
+                        <li class="text-list-item text-list-item-left"><a class="text-list-link" href="about.html" alt="about">About us</a></li>
+                        <li id="services-list-parent" class="text-list-item text-list-item-left"><a id="services-list-link" class="text-list-link" href="#services" alt="services">Services</a>
+                            <ul id="services-list">
+                                <div id="services-list-item-container">
+                                <li class="text-list-item services-list-item"><a class="text-list-link" href="homeowner_services.html" alt="homeowner services">For Homeowners</a></li>
+                                    <li class="text-list-item services-list-item"><a class="text-list-link" href="broker_services.html" alt="broker services">For Brokers</a></li>
+                                    <div class="triangle-down">▲</div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="img-link"><a href="index.html" alt="home"><img class="header-logo" src="../img/logo_green-grey.svg" alt="logo"></a></li>
+                        <li class="text-list-item text-list-item-right"><a class="text-list-link" href="testimonials.html" alt="testimonals">Testimonials</a></li>
+                        <li class="text-list-item text-list-item-right"><a class="text-list-link" href="contact.html" alt="contact">Contact Us</a></li>
+                    </ul>
+                    <a class="text-list-link" href="fax:503-601-6601" alt="503-601-6601">fax: (503) 601-6601</a>
+                </div>
+            </nav> 
+
+            <!--------------Mobile navigation------------->
+            <nav id="nav-mobile" class="nav">
+                <a class="img-link" href="tel:503-601-6600" alt="503-601-6600"><img class="icon-phone" src="../img/phone_nw-green.svg" alt="phone"></a>
+                <a class="img-link" href="index.html" alt="home"><img class="nav-logo" src="../img/logo_green-grey.svg" alt="logo"></a>
+                <button id="hamburger-btn"></button>
+                <div id="hamburger-list" class="list-container">
+                    <li class="text-list-item"><a class="text-list-link" href="about.html" alt="about">About us</a></li>
+                    <li class="text-list-item"><a class="text-list-link" href="homeowner_services.html" alt="homeowner services">Homeowner Services</a></li>
+                    <li class="text-list-item"><a class="text-list-link" href="broker_services.html" alt="broker services">Broker Services</a></li>
+                    <li class="text-list-item"><a class="text-list-link" href="testimonials.html" alt="testimonials">Testimonials</a></li>
+                    <li class="text-list-item"><a class="text-list-link" href="contact.html" alt="contact">Contact Us</a></li>
+                    <li class="text-list-item"><a id="phone" class="text-list-link" href="tel:503-601-6600" alt="503-601-6600">tel: (503) 601-6600</a></li>
+                    <li class="text-list-item"><a id="fax" class="text-list-link" href="fax:503-601-6601" alt="fax">fax: (503) 601-6601</a></li>
+                </div>
+            </nav>            
+        </header>
+    <!--------------Content------------->
+    <div id="content-wrapper">
+        <section id="main-banner" class="indent">
+            <div id="main-heading-wrapper">
+                <h1 id="main-heading-desktop">Rebuilding Your American Dream.</h1>
+                <a class="button" href="homeowner_services.html" alt="homeowner services">Get Started!</a>
+            </div>
+        </section>
+        <section class="content indent">
+            <h1 class="secondary-heading-desktop">Trust your short sale to NW HomeSavers.</h1>
+            <div class="article-container">
+                <article id="homeowner-article">
+                    <div>
+                        <div id="img-homeowner" class="customer-type-icon"></div>
+                        <h3 class="icon-title">Services for Homeowners</h3>
+                        <p>With a 90% success rate, we at NW HomeSavers negotiate a short sale for you directly through your bank. In the process, we also work to achieve forgiveness of your debts and to maximize the assistance that you receive from government-funded programs. This allows you to sell your home and to begin rebuilding your financial future with peace of mind.
+                        </p>
+                        <p><a class="text-link-light" href="homeowner_services.html" alt="Home Owner Info.">Learn more !</a></p>
+                    </div>
+                </article>
+                <article id="broker-article">
+                    <div id="img-broker" class="customer-type-icon"></div>
+                    <h3 class="icon-title">Services for Brokers</h3>
+                    <div>
+                        <p>Focus on growing your real estate business by partnering with NW HomeSavers. Our experienced team is fully trained to facilitate, service and manage your short sales, while maximizing your income potential. We complete each file with accuracy and efficiency with our custom-built system, allowing you to focus on growing your real estate business.</p>
+                        <p><a class="text-link-light" href="broker_services.html" alt="Broker Info.">Learn more !</a></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="content indent testimonial-content">
+            <h1 class="secondary-heading-desktop">What are people saying about us?</h1>
+            <div class="article-container">
+                <article class="testimonial-article">
+                    <div id="img-testimonial" class="customer-type-icon"></div>
+                    <h3 class="icon-title">Testimonials</h3>
+                    <blockquote class="testimony testimony-quote">
+                        <p>Thank you so much! I really appreciate everything you’ve done to make this happen. You have made this really tough situation so much easier.</p>             
+                    </blockquote>
+                    <blockquote class="testimony-giver">
+                        <p>&#8202;&mdash;&#8202;Guy B, Principal Broker</p>
+                    </blockquote>
+                    <div class="article-link-testimony"><p><a class="text-link-dark" href="testimonials.html" alt="testimonials">Read more !</a></p></div>
+                </article>
+            </div>
+        </section>
+        <footer id="main-footer">
+            <div id="footer-container">
+                <p>&copy; 2015 NW HomeSavers</p>          
+            </div>
+        </footer>
+    </div>
+    </body>
+</html>
+
+

@@ -1,0 +1,28 @@
+@media screen and (min-width: 1024px) {
+    #main-header {
+        padding: 10px 10%;
+    }
+    #content-wrapper {
+        .indent {
+            padding: 40px 10%;
+            }
+        .footer-indent {
+            padding: 0px 10%;
+        }
+    }
+}
+
+
+
+
+@media screen and (min-width: 1400px) {
+    #main-header {
+        padding: 25px 15%;
+    }
+    #content-wrapper .indent {
+        padding: 50px 15%;
+    }
+    #main-footer {
+        padding: 0px 15%;
+    }
+}

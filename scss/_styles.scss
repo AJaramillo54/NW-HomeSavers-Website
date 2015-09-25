@@ -1,0 +1,55 @@
+@media screen and (min-width: 1024px) {
+    .secondary-heading-desktop {
+        margin-bottom: 10px;
+    }
+    #get-started-list-container {
+        a {
+            border-bottom: 1px solid $black;
+        }
+    }
+    
+    fieldset {
+        .button-form {
+            margin: 40px 20px 20px 0;
+            width: 150px;
+        }
+    }
+    input{
+        &[name*="name"] {
+            width: 49%;
+        }
+        &[type="email"]
+        {
+            width: 63%;
+        }
+    }
+    input[name="company"],
+    input[name="street"],
+    textarea[name="message"] {
+        width: 99.5%;
+    }
+    #states,
+    input[name="zip"],
+    input[type="tel"],
+    input[name="date"],
+    input[name="time"] {
+        width: 35%;
+    }
+    input[name="city"] {
+        width: 51.5%;
+    }
+    #states {
+        width: 10%;
+    }
+    textarea {
+        height: 230px;
+        width: 100%;
+    }
+    #states,
+    input[name="lastname"],
+    input[name="zip"],
+    input[name="phone"],
+    input[name="time"] {
+        margin-left: 1%;
+    }
+}

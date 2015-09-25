@@ -1,0 +1,167 @@
+/***************** Color Extends ***************/
+%content-dark {
+    background-color: $color-background-dark;
+    color: $color-text-light;
+}
+
+%content-light {
+    background-color: $color-background-light;
+    color: $color-text-base;
+}
+
+%text-shadow-light {
+    text-shadow: 1px 1px 8px $light-green;
+}
+%text-shadow-dark {
+    text-shadow: 1px 1px 8px $dark-green;
+}
+
+%box-shadow-light {
+    box-shadow: 1px 1px 8px $light-green;
+}
+
+%box-shadow-dark {
+    box-shadow: 1px 1px 8px $dark-green;
+}
+
+
+/************** Typography  Extends ************/
+%h1 {
+    font-family: $stack-serif;
+    font-size: 2em;
+    letter-spacing: 1.5px;
+    margin: 0;
+    text-align: center;
+}
+
+%h1-main-desktop {
+    @extend %h1;
+    @extend %text-shadow-dark;
+    color: $color-text-main-heading;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+%h1-secondary-desktop {
+    @extend h1;
+    margin-bottom: 40px;
+}
+
+%h2 {
+    font-family: $stack-serif;
+    font-size: 1.5em;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+%h3 {
+    font-family: $stack-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    letter-spacing: 1.3px;
+}
+
+%p {
+    font: 1em/1.5 $stack-open-sans;
+    margin: 0;
+    & + p {
+        margin-top: 20px;
+    } 
+}
+
+%p-caption {
+    @extend p;
+    font-size: .85em;
+    line-height: 1em;
+    text-align: center;
+}
+
+%blockquote {
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    font-size: 1.2em;
+    line-height: 1.8;
+    &:before {
+        color: $nw-green;
+        content: open-quote;
+        font-size: 3em;
+        line-height: 0.1em;
+        margin-right: .25em;
+        vertical-align: -0.4em;
+    }
+    &:after {
+        color: $nw-green;
+        content: close-quote;
+        font-size: 3em;
+        line-height: 0.1em;
+        margin-left: .25em;
+        vertical-align: -0.4em;
+    }
+    p {
+        display: inline;
+    }
+}
+
+
+/***************** Link Extends ***************/
+%link-green {
+    color: $color-link-green;
+    font-family: $stack-serif;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        color: $color-link-green-hover;
+    }
+}
+
+%link-light {
+    display: inline-block;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    border-bottom: 1px solid $color-link-light;
+    color: $color-link-light;
+    &:hover,
+    &:focus {
+        color: $color-link-light-hover;
+        border-bottom: 1px solid $color-link-light-hover;
+    }
+}
+
+%link-dark {
+    display: inline-block;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    border-bottom: 1px solid $color-link-dark;
+    color: $color-link-dark;
+    &:hover {
+        color: $color-link-dark-hover;
+        border-bottom: 1px solid $color-link-dark-hover;
+    }
+}
+
+/***************** Slider Extends ***************/
+%slider-btn {
+    background-color: $nw-grey;
+    -webkit-border-radius: 25;
+    -moz-border-radius: 25;
+    border-radius: 25px;
+    border: none;
+    height: 7px;
+    width: 7px;
+    padding: 7px;
+
+    &:hover {
+        background-color: $nw-green;
+    }
+}
+
+%slider-btn-active {
+    transform: scale(1.4);
+    background-color: $nw-green;
+}
+

@@ -1,0 +1,52 @@
+// Descriptive color variables
+$light-green: #A5D28A;
+$green: #69BD45;
+$dark-green: #357140;
+$nw-green: #408C5F;
+$light-blue: #82CFD1;
+$blue: #00B4CD;
+$dark-blue: #507E88;
+$light-brown: #82CFD1;
+$brown: #BCA643;
+$dark-brown: #8E7557;
+$white: #fff;
+$black: #646464;
+$yellow: #E5E527;
+$red: #D31F3D;
+$nw-grey: #B8C3B6;
+// Functional color variables
+$color-text-main-heading: $white;
+$color-text-secondary-heading-black: $black;
+$color-text-secondary-heading-white: $white;
+$color-text-light: $white;
+$color-text-base: $black;
+$color-text-input: $dark-green;
+$color-link-green: $nw-green;
+$color-link-green-hover: $light-green;
+$color-link-green-visited: $nw-green;
+$color-link-light: $white;
+$color-link-light-hover: $light-green;
+$color-link-light-visited: $white;
+$color-link-dark: $black;
+$color-link-dark-hover: $nw-green;
+$color-link-dark-visited: $dark-green;
+
+$color-text-heading: $white;
+$color-text-p: $white;
+$color-border-light: $light-green;
+$color-border-dark: $nw-green;
+$color-background-dark: $nw-green;
+$color-background-light: $white;
+
+$color-button-green: $green;
+$color-button-green-hover: $light-green;
+$color-button-green-active: $nw-green;
+$color-button-white: $white;
+$color-button-white-hover: $light-green;
+$color-button-white-active: $green;
+// Fonts
+$stack-serif: 'Crete Round', serif;
+$stack-sans-serif: Helvetica, sans-serif;
+$stack-open-sans: 'Open Sans', $stack-sans-serif;
+// Images
+$image-main: '../img/house.jpg';

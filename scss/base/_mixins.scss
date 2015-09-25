@@ -1,0 +1,72 @@
+
+//Base Mixins
+
+@mixin background-img($image, $attachment, $position, $size) {
+    background: $white url($image) no-repeat $attachment $position;
+    background-size: $size;
+    @content;
+}
+
+@mixin background-img-icon($image, $position, $size){
+    background: url($image) no-repeat $position;
+    background-size: $size;
+}
+
+@mixin button($button-color, $color, $shadow-tint, $height, $width) {
+    background-color: $button-color;
+    color: $color;
+    font-family: $stack-serif;
+    font-size: 1.2em;
+    height: $height;
+    width: $width;
+    display: block;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    line-height: $height;
+    margin-bottom: 20px;
+    
+    @if ($shadow-tint==light) {
+        text-shadow: 1px 1px 8px $nw-green;
+        box-shadow: 4px 4px 10px $nw-green;
+    } else {
+        text-shadow: 1px 1px 8px $dark-green;
+        box-shadow: 4px 4px 10px $dark-green;
+    }    
+    
+    @if ($button-color==$color-button-green) {
+        &:hover,
+        &:focus {
+            background-color: $color-button-green-hover;
+        }
+        &:active {
+            background-color: $color-button-green-active;
+        }
+    } @else if ($button-color==$color-button-white) {
+        &:hover,
+        &:focus {
+            background-color: $color-button-white-hover;
+            color: white;
+        }
+        &:active {
+            background-color: $color-button-white-active;
+            color: white;
+        }
+    
+    
+    }
+}
+
+@mixin border ($location, $thickness, $color){
+    border-#{$location}: $thickness solid $color;
+}
+
+@mixin inset-shadow($color) {
+    box-shadow: .5px 1.5px 5px $color inset;
+}
+
+@mixin map-size ($height, $width) {
+    height: $height;
+    width: $width;
+}

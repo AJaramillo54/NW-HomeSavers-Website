@@ -1,0 +1,530 @@
+* {
+    box-sizing: border-box;
+}
+html {
+height: 100%;
+}
+
+body {
+    color: $color-text-base;
+    height: 100%;
+    // disable scrollability
+//    overflow-x: hidden;
+}
+
+
+
+/*************** Header ******************/
+#main-header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 105px;
+    @extend %content-light;
+    margin: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 5px solid $nw-grey;
+}
+.list-container,
+#services-list {
+    list-style: none;
+    padding: 0;
+}
+.list-container {
+    width: 100%;
+    margin: 0;  
+}
+.text-list-link{
+    @extend %link-green;
+}
+     
+#nav-desktop {
+    display: none;
+    width: 100%;
+}
+#nav-container-desktop {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header-logo {
+        margin: 0 10px;
+        width: 120px;
+        border: none;
+    }
+    .list-container {
+        width: 65%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .text-list-item {
+            width: 115px;
+        }
+        .text-list-link  {
+            font-size: 1.2em;
+            &:hover,
+            &:focus {
+                border-bottom: 2px solid $color-link-green-hover;
+            }
+            &[href^="tel"]:focus,
+            &[href^="tel"]:hover,
+            &[href^="fax"]:focus,
+            &[href^="fax"]:hover {
+                border-bottom: none;
+            }
+        }
+        .text-list-link[href^="tel"],
+        .text-list-link[href^="fax"] {
+            font-size: 1em;
+        }
+    }
+    .text-list-item-left {
+        text-align: right;
+    }
+    .text-list-item-right {
+        text-align: left;
+    }
+}
+#services-list-parent {
+    position: relative;
+    #services-list {
+        display: none;
+        position: absolute;
+        top: 69px;
+        left: -125px;
+        margin: auto;
+        width: 400px;
+        padding: 10px;
+//        border-radius: 5px;
+        background-color: $white;
+//        @include border (right, 5px, $nw-grey);
+//        @include border (bottom, 5px, $nw-grey);
+//        @include border (left, 5px, $nw-grey);
+        box-shadow: 1px 1px 7px $black;
+        .triangle-down {
+            position: absolute;
+            top: -17.5px;
+            left: 191px;
+            font-size: 1.5em;
+            color: $white;
+            text-shadow: 0px -3px .5px $nw-grey;
+        }
+        #services-list-item-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            width: 100%;
+            .services-list-item {
+                text-align: center;
+                width: 100%;
+                padding: 0;
+                & .services-list-item{
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+#nav-mobile {
+    width: 100%;
+    display: block;
+    position: relative;
+    .img-link {
+        .nav-logo {
+            width: 100px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        .icon-phone {
+            height: 35px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 8%;
+        }
+    }
+    #hamburger-btn {
+        z-index: 1000;
+        margin: auto 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 8%;
+        border: 0;
+        background: rgba(255,255,255,0.8) url('../img/hamburger_btn.svg') center no-repeat;
+        border-radius: 3px;
+        background-size: 80%;
+        width: 35px;
+        height: 35px;
+        outline: none;
+        -webkit-transition: all 400ms ease;
+        transition: all 400ms ease;
+        &.expanded {
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+            background: rgba(255,255,255,0.8) url('../img/hamburger_btn_x.svg') center no-repeat;
+            background-color: transparent;
+            border: 0;
+        }
+    }
+    #hamburger-list {
+        margin-top: 105px;
+        background-color: $white;
+        display: none;
+        position: fixed;
+        vertical-align: center;
+        top: 0;
+        .text-list-item {
+            background-color: transparent;
+            border-bottom: 1px solid $color-border-dark;
+            &:first-child {
+                border-top: 1px solid $color-border-dark;
+            }
+        }
+    }
+
+    .text-list-link {
+        display: block;
+        height: 90px;
+        line-height: 90px;
+        text-align: center;
+        font-size: 1.5em;
+    }
+}
+
+
+
+/****************** Content ********************/
+
+#content-wrapper {
+    position: relative;
+    top: 105px;
+}
+#main-heading-desktop {
+    @extend %h1-main-desktop;
+}
+.secondary-heading-desktop {
+    @extend %h1-secondary-desktop;
+    text-align: center;
+}
+#main-banner {
+    display: none;
+    z-index: 2;
+    @include background-img("../img/house.jpg", scroll, top center, cover);
+}
+.button {
+    @include button($color-button-green, $color-text-light,"dark", 50px, 180px);
+}
+.content {
+    padding: 40px;
+    z-index: 2;
+    height: 100%;
+    &:nth-child(even){
+        @extend %content-dark;
+        .secondary-heading-desktop {
+            color: $color-text-secondary-heading-white;
+        }
+    }
+    &:nth-child(odd){
+        @extend %content-light;
+        .secondary-heading-desktop {
+            color: $color-text-secondary-heading-black;
+        }
+    }
+    &:last-child {
+        border: none;
+    }
+}
+article {
+    .text-link-light {
+        @extend %link-light;
+    }
+    .text-link-dark {
+        @extend %link-dark;
+    }
+    margin-bottom: 40px;
+}
+.article-container .article-link {
+    margin-left: 40px;
+}
+.article-link-testimony {
+    margin-left: 60px;
+}
+.icon-title {
+    text-align: center;
+}
+
+
+
+/************** About Content ****************/
+#owner-img {
+    display: block;
+    height: 40%;
+    width: 40%;
+    max-width: 200px;
+    max-height: 300px;
+    margin: 0 auto 30px;
+    padding: 5px;
+    border-radius: 5px;
+    @extend %box-shadow-light;
+}
+#map {
+    margin: 50px auto 20px;
+
+}
+
+.map {
+    @include map-size(300px, 300px)
+        }
+.caption {
+    @extend %p-caption;
+}
+
+
+
+/************** Services Content ****************/
+#get-started-list-container {
+    margin-bottom: 20px;
+    .sub-list {
+    
+    }
+    .text-list-item {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    a {
+        border-bottom: none;
+    }
+}
+#mail-packet-list-container {
+    span {
+        display: block;
+        min-height: 35px;
+        padding-left: 50px;
+    }
+}
+#list-fax {
+    @include background-img-icon('../img/fax.svg', left, 25px 25px);
+}
+#list-tel {
+    @include background-img-icon('../img/phone_green.svg', left, 25px 25px);
+}
+#email {
+    @include background-img-icon('../img/email.svg', left, 25px 25px);    
+}
+#address {
+    @include background-img-icon('../img/pinpoint_green.svg', left, 25px 25px);
+}
+.mail-list-item {
+    margin-left: 30px;
+}
+//#fax::before {
+//    content="";
+//    @include background-img-icon();
+//}
+
+/************ Testimonials Content **************/
+
+#slider-nav {
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+    li {
+        & + li {
+            margin-left: 12px;
+        }
+    }
+}
+.slider-btn {
+    @extend %slider-btn;
+}
+.slider-btn-active {
+    @extend %slider-btn-active;
+}
+.slider-quote {
+    display: none;
+    margin-bottom: 5px;
+}
+.slider-quote-active {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.testimony-quote {
+    @extend %blockquote;
+}
+.testimony-giver {
+    margin: 1.5em 0 1.5em 60px;
+    height: 40px;
+    p {
+        line-height: 40px;
+    }
+}
+
+
+
+/************* Form Content ***************/
+
+form {
+    border: none;
+}
+#classes fieldset {
+    padding-left: 0;
+    padding-right: 0;
+}
+fieldset {
+    padding: 10px;
+    border: none;
+    margin-top: 20px;
+}
+
+legend {
+    @extend %h3;
+}
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    appearance: none; 
+    margin: 0; 
+}
+.input-text,
+#uploadFile,
+textarea {
+    color: $color-text-input;
+    @include inset-shadow($nw-grey);
+    border: none;
+    &:active,
+    &:focus {
+        @include inset-shadow($light-green);
+        @include border (1px, solid, $light-green);
+    }
+    &:not(.button-form):hover {
+        @include inset-shadow($nw-green);
+        @include border (1px, solid, $light-green);
+    }
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+input:not(.radio),
+textarea {
+    width: 100%;
+}
+
+input,
+select,
+textarea {
+    margin-top: 20px;
+}
+
+.input-text,
+select,
+#uploadFile {
+    height: 45px;
+    width: 100%;
+    padding-left: 10px;
+}
+
+textarea {
+    padding: 10px;
+    height: 200px;
+}
+
+.button-form-green {
+    margin-top: 40px;
+    @include button($color-button-green, $color-text-light, "dark", 50px, 100%);
+}
+
+.button-form-white {
+    margin-top: 40px;
+    @include button($color-button-white, $green, "dark", 50px, 100%);
+}
+
+.radio-container {
+    margin-top: 5px;
+}
+
+.radio + label span,
+#uploadBtn + label span {
+    cursor: pointer;
+}
+
+.radio + label span {
+    display: inline-block;   
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    background-size: 100%;
+}
+
+.radio {
+    display: none;
+    & + label span {
+        width: 19px;
+        height: 19px;
+        background: url("../img/radio_button.svg") no-repeat;   
+    }
+    &:checked + label span {
+        background: url("../img/radio_button_checked.svg") no-repeat;
+        background-size: 100%;        
+    }
+}
+#upload-container {
+    display: flex;
+}
+
+#uploadFile {
+    display: inline-block;
+    margin: 0;
+}
+
+#uploadBtn {
+    display: none;
+    & + label {
+        display: inline-block;
+    }
+    & + label span {
+        margin-right: 0;
+        @include button ($color-button-green, $color-text-light,"dark", 45px, 45px);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background: url("../img/packet.svg") no-repeat center;
+        background-size: 50%;
+        background-color: $color-button-green;
+    }
+}
+
+
+
+/*************** Footer ******************/
+#main-footer {
+    @include border(top, 5px, $nw-grey);
+    height: 80px;
+    padding: 0;
+    margin: 0;
+    #footer-container{
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        p {
+            line-height: 80px;
+        }
+    }
+}

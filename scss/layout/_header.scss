@@ -1,0 +1,11 @@
+@media screen and (min-width: 1024px) {
+    #main-header {
+        height: 120px;
+    }
+    #nav-desktop {
+        display: flex;
+    }
+    #nav-mobile {
+        display: none;
+    }
+}

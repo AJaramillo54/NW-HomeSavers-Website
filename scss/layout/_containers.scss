@@ -1,0 +1,107 @@
+// Media Queries
+@media screen and (min-width: 1024px) {
+    #content-wrapper {
+        top: 120px;
+    }
+    #main-banner {
+        display: inherit;
+        height: 380px;
+        #main-heading-wrapper {
+            position: relative;
+            top: 20%;
+            width: 350px;
+        }
+    }
+    #main-heading-mobile {
+        display: none;
+    }
+    .secondary-article,
+    .article-container,
+    .map-container{
+        display: flex;
+    }
+    .secondary-article,
+    .article-container {
+        flex-flow: row nowrap;
+    }
+    .homeowner-article,
+    .broker-article,
+    .testimonial-article,
+    .contact-article,
+    .location-article,
+    .secondary-article,
+    .article-margin {
+        margin: 0 auto;
+        width: 80%;
+    }
+    .article-container {
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .location-article,
+    .flex-article {
+        align-items: flex-start;
+        justify-content: center;
+        .map-container {
+            flex-flow: column;
+            align-items: center;
+        }
+        .caption {
+            text-align: center;
+        } 
+    }
+
+    .secondary-article { 
+        .indent-left {
+            margin-left: 50px;
+        }
+        #owner-img {
+            margin: 0;
+        }
+        #map {
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .map-size-contact {
+            @include map-size(300px, 450px);
+        }
+        .map-size-about {
+            @include map-size(350px, 400px);
+        }
+    }
+    article {
+        width: 45%;
+        padding-top: 25px;
+        padding-bottom: 50px;
+        .customer-type-icon{
+            margin: 10px auto;
+        }
+        p {
+            text-align: left;
+        }
+    }
+
+    #main-footer {
+        #footer-container {
+            padding: 0px 10%;
+            height: 80px;
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #main-banner {
+        height: 600px;
+        div { 
+            top: 23%;
+            #main-heading-desktop {
+                width: 500px;
+            }
+        }
+    }
+}

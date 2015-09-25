@@ -1,0 +1,28 @@
+h1 {
+    @extend %h1;
+}
+
+h2 {
+    @extend %h2;
+}
+
+h3 {
+    @extend %h3;
+}
+
+p{
+    @extend %p;
+}
+
+@media screen and (min-width: 1024px) {
+  #main-banner {
+        div {
+            text-align: left;
+        }
+    }
+    #main-heading-desktop {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        letter-spacing: 2px;
+    }
+}

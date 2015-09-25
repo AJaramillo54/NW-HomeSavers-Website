@@ -1,0 +1,31 @@
+.customer-type-icon {
+    margin: 0 auto 10px;
+    height: 80px;
+    width: 80px; 
+}
+
+
+#img-homeowner{
+    @include background-img-icon("../img/home_owner.svg", center, 100%);
+}
+#img-homeowner-green{
+    @include background-img-icon("../img/homeowner_green.svg", center, 100%);
+}
+#img-broker{
+    @include background-img-icon("../img/broker.svg", center, 100%);
+}
+#img-broker-green {
+    @include background-img-icon("../img/broker-green.svg", center, 100%)
+}
+#img-testimonial {
+    @include background-img-icon("../img/testimonial.svg", center, 100%);
+}
+#img-location {
+    @include background-img-icon("../img/pinpoint.svg", center, 100%);
+}
+#img-email {
+    @include background-img-icon("../img/email.svg", center, 100%);
+}
+#img-pencil {
+    @include background-img-icon("../img/pencil.svg", center, 100%);
+}
