@@ -8,8 +8,6 @@ height: 100%;
 body {
     color: $color-text-base;
     height: 100%;
-    // disable scrollability
-//    overflow-x: hidden;
 }
 
 
@@ -97,11 +95,7 @@ body {
         margin: auto;
         width: 400px;
         padding: 10px;
-//        border-radius: 5px;
         background-color: $white;
-//        @include border (right, 5px, $nw-grey);
-//        @include border (bottom, 5px, $nw-grey);
-//        @include border (left, 5px, $nw-grey);
         box-shadow: 1px 1px 7px $black;
         .triangle-down {
             position: absolute;
